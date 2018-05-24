@@ -12,9 +12,15 @@ Public Class Form1
 
     Private Sub btnCheckWord_Click(sender As Object, e As EventArgs) Handles btnCheckWord.Click
         OpenFileAndStart()
-        For i As Integer = 0 To arylines.Count - 1c
+        For i As Integer = 0 To arylines.Count - 1
             Console.WriteLine(arylines(i))
         Next
+    End Sub
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        ChooseWord()
+    End Sub
+    Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
+
     End Sub
     Private Sub OpenFileAndStart()
         ' creating Streamreader to open and read all words.
@@ -35,6 +41,8 @@ Public Class Form1
         reader.Close()
     End Sub
     Private Sub ChooseWord()
+        ' This sub is to choose the word. I'm opening the file with a streamreader then giving each line a number. Then i choose a random number, and find what word is on the line of the random number, and i display that word. 
+
         Dim IoFile As New StreamReader("9letter.txt")
         Dim lines As New List(Of String)
         Dim line As Integer
@@ -46,15 +54,11 @@ Public Class Form1
         IoFile.Close()
         IoFile.Dispose()
         Console.WriteLine(lines(line).Trim)
-
-
+    End Sub
+    Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        ChooseWord()
-
-    End Sub
 
 End Class
 

@@ -43,6 +43,8 @@ Partial Class Form1
         Me.txtbox1 = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnCheat = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,7 +59,7 @@ Partial Class Form1
         '
         'btnReset
         '
-        Me.btnReset.Location = New System.Drawing.Point(319, 529)
+        Me.btnReset.Location = New System.Drawing.Point(315, 527)
         Me.btnReset.Name = "btnReset"
         Me.btnReset.Size = New System.Drawing.Size(80, 33)
         Me.btnReset.TabIndex = 1
@@ -220,7 +222,7 @@ Partial Class Form1
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(209, 29)
+        Me.RichTextBox1.Location = New System.Drawing.Point(660, 43)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(100, 96)
         Me.RichTextBox1.TabIndex = 19
@@ -235,11 +237,32 @@ Partial Class Form1
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(647, 9)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 20)
+        Me.Label4.TabIndex = 21
+        Me.Label4.Text = "Developer Side"
+        '
+        'btnCheat
+        '
+        Me.btnCheat.Location = New System.Drawing.Point(402, 527)
+        Me.btnCheat.Name = "btnCheat"
+        Me.btnCheat.Size = New System.Drawing.Size(80, 33)
+        Me.btnCheat.TabIndex = 22
+        Me.btnCheat.Text = "Cheat"
+        Me.btnCheat.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(540, 585)
+        Me.ClientSize = New System.Drawing.Size(854, 585)
+        Me.Controls.Add(Me.btnCheat)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.txtbox1)
@@ -288,4 +311,6 @@ Partial Class Form1
     Friend WithEvents txtbox1 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents btnCheat As Button
 End Class
