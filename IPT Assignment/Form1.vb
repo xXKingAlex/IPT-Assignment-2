@@ -3,6 +3,7 @@ Public Class Form1
         Dim arylines As List(Of String) = New List(Of String)
     Dim aryLines2 As List(Of String) = New List(Of String)
     Dim rnd As New Random
+    Dim rnd2 As New Random
     Dim ChosenWord As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenFileAndStart()
@@ -53,12 +54,29 @@ Public Class Form1
         RichTextBox1.AppendText(lines(line).Trim())
         IoFile.Close()
         IoFile.Dispose()
-        Console.WriteLine(lines(line).Trim)
-    End Sub
-    Private Sub SpillitingWord()
+        ChosenWord = lines(line).Trim
+        Console.WriteLine(ChosenWord)
+
+        Dim arrayLetters As List(Of String) = New List(Of String)
+        For i As Integer = 0 To 8
+            arrayLetters.Add(ChosenWord.Chars(i))
+
+            rnd2.Next(0, 8)
+
+
+
+        Next
+
+
+
+
 
     End Sub
 
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
 End Class
 
 
