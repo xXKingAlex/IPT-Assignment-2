@@ -20,7 +20,7 @@ Public Class Form1
         ChooseWord()
     End Sub
     Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
-
+        Me.Width += 400
     End Sub
     Private Sub OpenFileAndStart()
         ' creating Streamreader to open and read all words.
@@ -55,10 +55,9 @@ Public Class Form1
         IoFile.Dispose()
         Console.WriteLine(lines(line).Trim)
     End Sub
-    Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
+    Private Sub SpillitingWord()
 
     End Sub
-
 
 End Class
 
