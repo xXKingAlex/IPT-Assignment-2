@@ -16,16 +16,18 @@ Public Class Form1
         '   For i As Integer = 0 To arylines.Count - 1
         ' Console.WriteLine(arylines(i))
         '   Next
-
         ChooseWord()
-
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
     End Sub
     Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
         Me.Width += 400
+    End Sub
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+    Private Sub txtbox1_TextChanged(sender As Object, e As EventArgs) Handles txtbox1.TextChanged
+
     End Sub
     Private Sub OpenFileAndStart()
         ' creating Streamreader to open and read all words.
@@ -65,6 +67,11 @@ Public Class Form1
         For i As Integer = 0 To 8
             arrayLetters.Add(ChosenWord.Chars(i))
         Next
+        If ChosenWord Like "[a,e,i,o,u]" Then
+
+        End If
+
+
         lbl1.Text = arrayLetters(0)
         lbl2.Text = arrayLetters(1)
         lbl3.Text = arrayLetters(2)
@@ -75,10 +82,10 @@ Public Class Form1
         lbl8.Text = arrayLetters(7)
         lbl9.Text = arrayLetters(8)
 
+
+
     End Sub
-
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub FindAnswersFor9LetterWord()
 
     End Sub
 End Class
