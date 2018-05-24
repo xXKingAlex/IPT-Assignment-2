@@ -55,6 +55,7 @@ Public Class Form1
         ChooseWord()
 
     End Sub
+
 End Class
 
 
