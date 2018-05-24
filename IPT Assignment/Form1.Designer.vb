@@ -74,7 +74,7 @@ Partial Class Form1
         '
         Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Location = New System.Drawing.Point(34, 148)
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 147)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(365, 368)
         Me.PictureBox1.TabIndex = 2
@@ -83,92 +83,92 @@ Partial Class Form1
         'lbl1
         '
         Me.lbl1.AutoSize = True
-        Me.lbl1.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl1.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl1.Location = New System.Drawing.Point(150, 440)
         Me.lbl1.Name = "lbl1"
-        Me.lbl1.Size = New System.Drawing.Size(29, 26)
+        Me.lbl1.Size = New System.Drawing.Size(29, 33)
         Me.lbl1.TabIndex = 3
         Me.lbl1.Text = "0"
         '
         'lbl2
         '
         Me.lbl2.AutoSize = True
-        Me.lbl2.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl2.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl2.Location = New System.Drawing.Point(132, 227)
         Me.lbl2.Name = "lbl2"
-        Me.lbl2.Size = New System.Drawing.Size(29, 26)
+        Me.lbl2.Size = New System.Drawing.Size(29, 33)
         Me.lbl2.TabIndex = 4
         Me.lbl2.Text = "0"
         '
         'lbl3
         '
         Me.lbl3.AutoSize = True
-        Me.lbl3.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl3.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl3.Location = New System.Drawing.Point(75, 386)
         Me.lbl3.Name = "lbl3"
-        Me.lbl3.Size = New System.Drawing.Size(29, 26)
+        Me.lbl3.Size = New System.Drawing.Size(29, 33)
         Me.lbl3.TabIndex = 5
         Me.lbl3.Text = "0"
         '
         'lbl4
         '
         Me.lbl4.AutoSize = True
-        Me.lbl4.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl4.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl4.Location = New System.Drawing.Point(304, 386)
         Me.lbl4.Name = "lbl4"
-        Me.lbl4.Size = New System.Drawing.Size(29, 26)
+        Me.lbl4.Size = New System.Drawing.Size(29, 33)
         Me.lbl4.TabIndex = 6
         Me.lbl4.Text = "0"
         '
         'lbl5
         '
         Me.lbl5.AutoSize = True
-        Me.lbl5.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl5.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl5.Location = New System.Drawing.Point(260, 227)
         Me.lbl5.Name = "lbl5"
-        Me.lbl5.Size = New System.Drawing.Size(29, 26)
+        Me.lbl5.Size = New System.Drawing.Size(29, 33)
         Me.lbl5.TabIndex = 7
         Me.lbl5.Text = "0"
         '
         'lbl6
         '
         Me.lbl6.AutoSize = True
-        Me.lbl6.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl6.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl6.Location = New System.Drawing.Point(224, 440)
         Me.lbl6.Name = "lbl6"
-        Me.lbl6.Size = New System.Drawing.Size(29, 26)
+        Me.lbl6.Size = New System.Drawing.Size(29, 33)
         Me.lbl6.TabIndex = 8
         Me.lbl6.Text = "0"
         '
         'lbl7
         '
         Me.lbl7.AutoSize = True
-        Me.lbl7.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl7.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl7.Location = New System.Drawing.Point(75, 290)
         Me.lbl7.Name = "lbl7"
-        Me.lbl7.Size = New System.Drawing.Size(29, 26)
+        Me.lbl7.Size = New System.Drawing.Size(29, 33)
         Me.lbl7.TabIndex = 9
         Me.lbl7.Text = "0"
         '
         'lbl8
         '
         Me.lbl8.AutoSize = True
-        Me.lbl8.Font = New System.Drawing.Font("Goudy Stout", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl8.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl8.Location = New System.Drawing.Point(319, 303)
         Me.lbl8.Name = "lbl8"
-        Me.lbl8.Size = New System.Drawing.Size(29, 26)
+        Me.lbl8.Size = New System.Drawing.Size(29, 33)
         Me.lbl8.TabIndex = 10
         Me.lbl8.Text = "0"
         '
         'lbl9
         '
         Me.lbl9.AutoSize = True
-        Me.lbl9.Font = New System.Drawing.Font("Bernard MT Condensed", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl9.Location = New System.Drawing.Point(184, 325)
+        Me.lbl9.Font = New System.Drawing.Font("Calibri", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl9.Location = New System.Drawing.Point(194, 303)
         Me.lbl9.Name = "lbl9"
-        Me.lbl9.Size = New System.Drawing.Size(51, 19)
+        Me.lbl9.Size = New System.Drawing.Size(29, 33)
         Me.lbl9.TabIndex = 11
-        Me.lbl9.Text = "Label9"
+        Me.lbl9.Text = "0"
         '
         'ListBox1
         '
@@ -234,7 +234,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(64, 101)
+        Me.Button1.Location = New System.Drawing.Point(858, 101)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 20
@@ -288,7 +288,7 @@ Partial Class Form1
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(178, 77)
+        Me.Button2.Location = New System.Drawing.Point(858, 168)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 26
@@ -299,7 +299,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(536, 585)
+        Me.ClientSize = New System.Drawing.Size(543, 585)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.Label6)

@@ -12,13 +12,17 @@ Public Class Form1
     End Sub
 
     Private Sub btnCheckWord_Click(sender As Object, e As EventArgs) Handles btnCheckWord.Click
-        OpenFileAndStart()
-        For i As Integer = 0 To arylines.Count - 1
-            Console.WriteLine(arylines(i))
-        Next
-    End Sub
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        '    OpenFileAndStart()
+        '   For i As Integer = 0 To arylines.Count - 1
+        ' Console.WriteLine(arylines(i))
+        '   Next
+
         ChooseWord()
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
     End Sub
     Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
         Me.Width += 400
@@ -60,16 +64,16 @@ Public Class Form1
         Dim arrayLetters As List(Of String) = New List(Of String)
         For i As Integer = 0 To 8
             arrayLetters.Add(ChosenWord.Chars(i))
-
-            rnd2.Next(0, 8)
-
-
-
         Next
-
-
-
-
+        lbl1.Text = arrayLetters(0)
+        lbl2.Text = arrayLetters(1)
+        lbl3.Text = arrayLetters(2)
+        lbl4.Text = arrayLetters(3)
+        lbl5.Text = arrayLetters(4)
+        lbl6.Text = arrayLetters(5)
+        lbl7.Text = arrayLetters(6)
+        lbl8.Text = arrayLetters(7)
+        lbl9.Text = arrayLetters(8)
 
     End Sub
 
