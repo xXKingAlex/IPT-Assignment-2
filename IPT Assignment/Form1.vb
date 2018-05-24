@@ -3,6 +3,7 @@ Public Class Form1
         Dim arylines As List(Of String) = New List(Of String)
     Dim aryLines2 As List(Of String) = New List(Of String)
     Dim rnd As New Random
+    Dim ChosenWord As String
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenFileAndStart()
     End Sub
@@ -11,7 +12,7 @@ Public Class Form1
 
     Private Sub btnCheckWord_Click(sender As Object, e As EventArgs) Handles btnCheckWord.Click
         OpenFileAndStart()
-        For i As Integer = 0 To arylines.Count - 1
+        For i As Integer = 0 To arylines.Count - 1c
             Console.WriteLine(arylines(i))
         Next
     End Sub
@@ -44,7 +45,7 @@ Public Class Form1
         RichTextBox1.AppendText(lines(line).Trim())
         IoFile.Close()
         IoFile.Dispose()
-        Console.WriteLine(ChooseWord)
+        Console.WriteLine(lines(line).Trim)
 
 
 
