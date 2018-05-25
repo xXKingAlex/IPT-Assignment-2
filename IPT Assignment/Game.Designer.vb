@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class Game
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,8 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Game))
         Me.btnCheckWord = New System.Windows.Forms.Button()
         Me.btnReset = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -35,12 +36,12 @@ Partial Class Form1
         Me.lbl7 = New System.Windows.Forms.Label()
         Me.lbl8 = New System.Windows.Forms.Label()
         Me.lbl9 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.lstAnswers = New System.Windows.Forms.ListBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.PropertyGrid1 = New System.Windows.Forms.PropertyGrid()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtbox1 = New System.Windows.Forms.TextBox()
+        Me.txtanswer1 = New System.Windows.Forms.TextBox()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -49,6 +50,10 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ListBox2 = New System.Windows.Forms.ListBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.lblWords = New System.Windows.Forms.Label()
+        Me.tmrGame = New System.Windows.Forms.Timer(Me.components)
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -170,19 +175,19 @@ Partial Class Form1
         Me.lbl9.TabIndex = 11
         Me.lbl9.Text = "0"
         '
-        'ListBox1
+        'lstAnswers
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(417, 147)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(110, 368)
-        Me.ListBox1.TabIndex = 12
+        Me.lstAnswers.FormattingEnabled = True
+        Me.lstAnswers.Location = New System.Drawing.Point(417, 147)
+        Me.lstAnswers.Name = "lstAnswers"
+        Me.lstAnswers.Size = New System.Drawing.Size(110, 368)
+        Me.lstAnswers.TabIndex = 12
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(414, 121)
+        Me.Label1.Location = New System.Drawing.Point(530, 121)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(68, 18)
         Me.Label1.TabIndex = 13
@@ -192,7 +197,7 @@ Partial Class Form1
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(414, 77)
+        Me.Label3.Location = New System.Drawing.Point(27, 121)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(50, 18)
         Me.Label3.TabIndex = 15
@@ -216,17 +221,17 @@ Partial Class Form1
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Circuit Breaker"
         '
-        'txtbox1
+        'txtanswer1
         '
-        Me.txtbox1.Location = New System.Drawing.Point(34, 529)
-        Me.txtbox1.Multiline = True
-        Me.txtbox1.Name = "txtbox1"
-        Me.txtbox1.Size = New System.Drawing.Size(189, 31)
-        Me.txtbox1.TabIndex = 18
+        Me.txtanswer1.Location = New System.Drawing.Point(34, 529)
+        Me.txtanswer1.Multiline = True
+        Me.txtanswer1.Name = "txtanswer1"
+        Me.txtanswer1.Size = New System.Drawing.Size(189, 31)
+        Me.txtanswer1.TabIndex = 18
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(651, 59)
+        Me.RichTextBox1.Location = New System.Drawing.Point(746, 64)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(157, 36)
         Me.RichTextBox1.TabIndex = 19
@@ -234,7 +239,7 @@ Partial Class Form1
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(858, 101)
+        Me.Button1.Location = New System.Drawing.Point(895, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 20
@@ -245,7 +250,7 @@ Partial Class Form1
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(647, 9)
+        Me.Label4.Location = New System.Drawing.Point(742, 9)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(131, 20)
         Me.Label4.TabIndex = 21
@@ -263,7 +268,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(648, 34)
+        Me.Label5.Location = New System.Drawing.Point(743, 37)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(119, 13)
         Me.Label5.TabIndex = 23
@@ -272,34 +277,68 @@ Partial Class Form1
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(648, 101)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(743, 121)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(46, 13)
+        Me.Label6.Size = New System.Drawing.Size(72, 18)
         Me.Label6.TabIndex = 24
-        Me.Label6.Text = "answers"
+        Me.Label6.Text = "Answers"
         '
         'ListBox2
         '
         Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(651, 121)
+        Me.ListBox2.Location = New System.Drawing.Point(533, 147)
         Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(185, 381)
+        Me.ListBox2.Size = New System.Drawing.Size(108, 368)
         Me.ListBox2.TabIndex = 25
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(858, 168)
+        Me.Button2.Location = New System.Drawing.Point(984, 12)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 26
         Me.Button2.Text = "Button2"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Form1
+        'lblWords
+        '
+        Me.lblWords.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWords.Location = New System.Drawing.Point(399, 92)
+        Me.lblWords.Name = "lblWords"
+        Me.lblWords.Size = New System.Drawing.Size(111, 47)
+        Me.lblWords.TabIndex = 27
+        Me.lblWords.Text = "Words you have entered: "
+        '
+        'tmrGame
+        '
+        Me.tmrGame.Interval = 6000
+        '
+        'btnStart
+        '
+        Me.btnStart.Location = New System.Drawing.Point(200, 24)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(89, 38)
+        Me.btnStart.TabIndex = 28
+        Me.btnStart.Text = " Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'RichTextBox2
+        '
+        Me.RichTextBox2.Location = New System.Drawing.Point(746, 142)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(235, 401)
+        Me.RichTextBox2.TabIndex = 29
+        Me.RichTextBox2.Text = ""
+        '
+        'Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(543, 585)
+        Me.ClientSize = New System.Drawing.Size(1071, 585)
+        Me.Controls.Add(Me.RichTextBox2)
+        Me.Controls.Add(Me.btnStart)
+        Me.Controls.Add(Me.lblWords)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ListBox2)
         Me.Controls.Add(Me.Label6)
@@ -308,12 +347,12 @@ Partial Class Form1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.RichTextBox1)
-        Me.Controls.Add(Me.txtbox1)
+        Me.Controls.Add(Me.txtanswer1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PropertyGrid1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.lstAnswers)
         Me.Controls.Add(Me.lbl9)
         Me.Controls.Add(Me.lbl8)
         Me.Controls.Add(Me.lbl7)
@@ -326,8 +365,8 @@ Partial Class Form1
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnReset)
         Me.Controls.Add(Me.btnCheckWord)
-        Me.Name = "Form1"
-        Me.Text = "Form1"
+        Me.Name = "Game"
+        Me.Text = "kj"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -346,12 +385,12 @@ Partial Class Form1
     Friend WithEvents lbl7 As Label
     Friend WithEvents lbl8 As Label
     Friend WithEvents lbl9 As Label
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents lstAnswers As ListBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents PropertyGrid1 As PropertyGrid
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtbox1 As TextBox
+    Friend WithEvents txtanswer1 As TextBox
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button1 As Button
     Friend WithEvents Label4 As Label
@@ -360,4 +399,8 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents ListBox2 As ListBox
     Friend WithEvents Button2 As Button
+    Friend WithEvents lblWords As Label
+    Friend WithEvents tmrGame As Timer
+    Friend WithEvents btnStart As Button
+    Friend WithEvents RichTextBox2 As RichTextBox
 End Class
