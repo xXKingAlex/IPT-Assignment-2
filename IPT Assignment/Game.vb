@@ -132,10 +132,31 @@ Public Class Game
 
         For i As Integer = 0 To wordlist.Count - 1
             If wordlist(i) Like str & str & str & str Then
-                lstAnswers.Items.Add(wordlist(i))
+                '   lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
 
             End If
+            If wordlist(i) Like str & str & str & str & str Then
+                '  lstAnswers.Items.Add(wordlist(i))
+                RichTextBox2.Text += wordlist(i) & vbCrLf
+
+            End If
+            If wordlist(i) Like str & str & str & str & str & str Then
+                '  lstAnswers.Items.Add(wordlist(i))
+                RichTextBox2.Text += wordlist(i) & vbCrLf
+
+            End If
+            If wordlist(i) Like str & str & str & str & str & str & str Then
+                '  lstAnswers.Items.Add(wordlist(i))
+                RichTextBox2.Text += wordlist(i) & vbCrLf
+
+            End If
+            If wordlist(i) Like str & str & str & str & str & str & str & str Then
+                ' lstAnswers.Items.Add(wordlist(i))
+                RichTextBox2.Text += wordlist(i) & vbCrLf
+
+            End If
+
         Next
 
 
