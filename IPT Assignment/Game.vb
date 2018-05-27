@@ -9,6 +9,8 @@ Public Class Game
         OpenFileAndStart()
         ChooseWord()
         FindAnswersFor9LetterWord()
+        Score()
+
     End Sub
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         RichTextBox1.Text = ""
@@ -22,8 +24,11 @@ Public Class Game
         lbl7.Text = ""
         lbl8.Text = ""
         lbl9.Text = ""
-
-
+        RichTextBox2.Text = ""
+        OpenFileAndStart()
+        ChooseWord()
+        FindAnswersFor9LetterWord()
+        Score()
     End Sub
 
     Private Sub btnCheckWord_Click(sender As Object, e As EventArgs) Handles btnCheckWord.Click
@@ -154,13 +159,11 @@ Public Class Game
             If wordlist(i) Like str & str & str & str & str & str & str & str Then
                 ' lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
-
             End If
-
         Next
-
-
-
+    End Sub
+    Private Sub Score()
+        Dim reader = New StreamReader("scores.txt")
     End Sub
 
     Private Sub tmrGame_Tick(sender As Object, e As EventArgs) Handles tmrGame.Tick
