@@ -335,7 +335,7 @@ Partial Class Game
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1071, 585)
+        Me.ClientSize = New System.Drawing.Size(655, 585)
         Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.btnStart)
         Me.Controls.Add(Me.lblWords)

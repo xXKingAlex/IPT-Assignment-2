@@ -4,13 +4,13 @@ Public Class Game
     Dim aryLines2 As List(Of String) = New List(Of String)
     Dim ChosenWord As String
     Dim rnd2 As New Random
+    Dim aryAnswers As List(Of String) = New List(Of String)
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         OpenFileAndStart()
         ChooseWord()
         FindAnswersFor9LetterWord()
         Score()
-
     End Sub
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         RichTextBox1.Text = ""
@@ -30,37 +30,28 @@ Public Class Game
         FindAnswersFor9LetterWord()
         Score()
     End Sub
-
     Private Sub btnCheckWord_Click(sender As Object, e As EventArgs) Handles btnCheckWord.Click
-
-        Console.WriteLine(String.Equals(txtanswer1.Text, ChosenWord))
-        If txtanswer1.Text = ChosenWord Then
-            lstAnswers.Items.Add(txtanswer1.Text)
-        Else
-            MsgBox("Wrong Answer")
-        End If
-
+        CheckAnswer()
 
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-    End Sub
-    Private Sub txtanswer1_TextChanged(sender As Object, e As EventArgs) Handles txtanswer1.TextChanged
-
-
     End Sub
     Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
         ChooseWord()
     End Sub
     Private Sub btnCheat_Click(sender As Object, e As EventArgs) Handles btnCheat.Click
         If sender.Text = "Cheat" Then
-            Me.Width += 400
+            Me.Width += 500
             sender.Text = "Uncheat"
         Else
-            Me.Width -= 400
+            Me.Width -= 500
             sender.Text = "Cheat"
         End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+    Private Sub tmrGame_Tick(sender As Object, e As EventArgs) Handles tmrGame.Tick
 
     End Sub
     Private Sub OpenFileAndStart()
@@ -122,9 +113,6 @@ Public Class Game
         lbl7.Text = arrayLetters(6)
         lbl8.Text = arrayLetters(7)
         lbl9.Text = chosenLetter
-
-
-
     End Sub
     Private Sub FindAnswersFor9LetterWord()
         Dim reader = New StreamReader("4to8letter.txt")
@@ -133,53 +121,76 @@ Public Class Game
             wordlist.Add(reader.ReadLine)
         Loop
         reader.Close()
+
         Dim str As String = "[" & ChosenWord.Chars(0) & "," & ChosenWord.Chars(1) & "," & ChosenWord.Chars(2) & "," & ChosenWord.Chars(3) & "," & ChosenWord.Chars(4) & "," & ChosenWord.Chars(5) & "," & ChosenWord.Chars(6) & "," & ChosenWord.Chars(7) & "," & ChosenWord.Chars(8) & "]"
 
         For i As Integer = 0 To wordlist.Count - 1
             If wordlist(i) Like str & str & str & str Then
                 '   lstAnswers.Items.Add(wordlist(i))
+                aryAnswers.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
-
             End If
             If wordlist(i) Like str & str & str & str & str Then
                 '  lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
-
+                aryAnswers.Add(wordlist(i))
             End If
             If wordlist(i) Like str & str & str & str & str & str Then
                 '  lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
-
+                aryAnswers.Add(wordlist(i))
             End If
             If wordlist(i) Like str & str & str & str & str & str & str Then
                 '  lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
-
+                aryAnswers.Add(wordlist(i))
             End If
             If wordlist(i) Like str & str & str & str & str & str & str & str Then
                 ' lstAnswers.Items.Add(wordlist(i))
                 RichTextBox2.Text += wordlist(i) & vbCrLf
+                aryAnswers.Add(wordlist(i))
             End If
         Next
+
+
+    End Sub
+    Private Sub CheckAnswer()
+        Console.WriteLine(String.Equals(txtanswer1.Text, ChosenWord))
+
+
+
+
+        If txtanswer1.Text = ChosenWord Then
+            lstAnswers.Items.Add(txtanswer1.Text)
+        Else
+            MsgBox("Wrong Answer")
+        End If
+
+
+        Dim correct As Boolean
+
+        For i As Integer = 0 To aryAnswers.Count - 1
+            If txtanswer1.Text = aryAnswers(i) Then
+                correct = True
+            End If
+        Next
+        If correct Then
+            lstAnswers.Items.Add(txtanswer1.Text)
+        Else
+            MsgBox("Wrong Answer")
+        End If
     End Sub
     Private Sub Score()
         Dim reader = New StreamReader("scores.txt")
     End Sub
 
-    Private Sub tmrGame_Tick(sender As Object, e As EventArgs) Handles tmrGame.Tick
+    Private Sub txtanswer1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtanswer1.KeyPress
+        If e.KeyChar = Microsoft.VisualBasic.ChrW(Keys.Return) Then
+            CheckAnswer()
+        End If
+
 
     End Sub
-
-    '[a,e,i,o,u]
-    '[chosenWord.Chars(0),chosenWord.Chars(1),chosenWord.Chars(2),chosenWord.Chars(3)....... (cont),]
-    'Loop for every word in your answers
-
-    'If answersWOrds(i) Like str & str & str & str
-    'Code for valid answer
-    'End if
-
-    'End loop
-
 End Class
 
 
